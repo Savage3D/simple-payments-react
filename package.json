@@ -2,7 +2,6 @@
   "name": "test-task-front",
   "version": "0.1.0",
 	"private": true,
-	"proxy": "https://simple-payments-api.herokuapp.com",
   "dependencies": {
     "@material-ui/core": "^4.10.0",
     "@material-ui/styles": "^4.10.0",
