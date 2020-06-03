@@ -29,11 +29,15 @@ function App() {
 
 	async function handleLoginClick(event, name, redirectCb) {
 		event.preventDefault();
-		const response = await api.postLogin(name);
+		let response = await api.postLogin(name);
 		setUserName(response.data.user.name);
 		setUserBalance(response.data.user.balance);
 		setUserPayments(response.data.user.payments);
 		api.setToken(response.data.token);
+
+		response = await api.getUsersMinInfo();
+		setUsers(response.data);
+
 		redirectCb();
 	}
 
